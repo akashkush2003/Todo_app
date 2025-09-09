@@ -1,0 +1,26 @@
+body {
+   background-color: antiquewhite;
+}
+
+.navbar-brand {
+   /* My to do nav box ko style kr raha */
+   background-color: #ffffff;
+   color: #0e0d0d;
+   font-weight: bold;
+}
+
+.d-flex {
+   /* seach box */
+   /* background-color: #ffffff;  */
+   color: #0e0d0d;
+   font-weight: bold;
+}
+
+.mb-3 {
+   /* Add to do k ander to do title k font shi krna*/
+   font-weight: 500;
+}
+
+.navbar {  /* Navbar ko saja raha h*/
+   font-weight: 600;
+}
