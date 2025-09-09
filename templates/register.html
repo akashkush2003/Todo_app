@@ -1,0 +1,65 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+</head>
+<body>
+    <h2>Register</h2>
+    {% if error %}<p style="color:red">{{ error }}</p>{% endif %}
+    <form method="POST">
+        <input type="text" name="username" placeholder="Username" required><br>
+        <input type="password" name="password" placeholder="Password" required><br>
+        <button type="submit">Register</button>
+    </form>
+    <p>Already have an account? <a href="{{ url_for('login') }}">Login</a></p>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <!-- Optional external CSS -->
+    <style>
+        .login-container {max-width:400px;margin:4rem auto;padding:2rem;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.1);}
+        .login-header h2 {margin-bottom:0.5rem;}
+        .error-message {color:red;font-size:0.9em;margin-bottom:0.5rem;}
+        .login-form input {width:100%;padding:0.75rem;margin-bottom:0.75rem;box-sizing:border-box;}
+        .login-btn {width:100%;padding:0.75rem;}
+        .remember-wrapper{display:flex;align-items:center;margin-bottom:1rem;}
+        .signup-link{text-align:center;margin-top:1rem;}
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <h2>Create Account</h2>
+            <p>Fill in the details below to register</p>
+        </div>
+        {% if message %}
+            <div class="error-message">{{ message }}</div>
+        {% endif %}
+        <form class="login-form" method="POST" novalidate>
+            <div class="form-group">
+                <input type="text" name="username" id="username" autocomplete="username" required placeholder="Username">
+            </div>
+            <!-- <div class="form-group">
+                <input type="email" name="email" id="email" autocomplete="email" required placeholder="Email Address">
+            </div> -->
+            <div class="form-group">
+                <input type="password" name="password" id="password" autocomplete="new-password" required placeholder="Password">
+            </div>
+            <div class="form-group">
+                <input type="password" name="confirm_password" id="confirm_password" autocomplete="new-password" required placeholder="Confirm Password">
+            </div>
+            <button type="submit" class="login-btn"><span class="btn-text">Register</span></button>
+        </form>
+        <div class="signup-link">
+            <p>Already have an account? <a href="{{ url_for('login') }}">Sign In</a></p>
+        </div>
+    </div>
+</body>
+</html>
+
